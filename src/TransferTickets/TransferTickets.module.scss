@@ -1,0 +1,60 @@
+@import '../variables';
+@import '../mixin';
+
+.transfer {
+  min-width: 212px;
+  padding-top: 20px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  color: $transferColor;
+
+  &__item {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  &__checkbox {
+    width: '100%';
+    margin-top: 6px;
+    margin-bottom: 12px;
+    padding-top: '12px';
+  }
+
+  .text {
+    padding-left: 20px;
+    word-wrap: normal;
+    letter-spacing: 0.5px;
+  }
+
+  @include screen-920 {
+    .text {
+      display: block;
+    }
+  }
+}
+
+.transfer > div > label {
+  padding-left: 20px;
+  width: 218px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  padding-top: '12px';
+}
+
+.transfer > div > label:hover {
+  background: $transferBg;
+}
+.transfer > label:hover {
+  background: $transferBg;
+}
+.transfer > label {
+  width: 218px;
+  margin-top: 6px;
+  padding-left: 20px;
+}

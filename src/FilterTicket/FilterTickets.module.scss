@@ -1,0 +1,18 @@
+.filters {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  vertical-align: text-top;
+}
+
+.filters > label {
+  flex-shrink: 0;
+  flex-grow: 1;
+  height: 50px;
+}
+
+span {
+  vertical-align: text-top;
+  font-family: 'Open Sans';
+  font-style: normal;
+}
