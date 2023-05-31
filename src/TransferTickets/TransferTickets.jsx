@@ -5,12 +5,12 @@ import styles from './TransferTickets.module.scss';
 import { actionTransfers } from '../store/transfers/action';
 
 function TransferTickets() {
-  const [checkedList, setCheckedList] = useState();
-  const [indeterminate, setIndeterminate] = useState(true);
-  const [checkAll, setCheckAll] = useState(false);
+  const plainOptions = ['Без пересадок', '1 пересадка', '2 пересадки', '3 пересадки'];
+  const [checkedList, setCheckedList] = useState(plainOptions);
+  const [indeterminate, setIndeterminate] = useState(false);
+  const [checkAll, setCheckAll] = useState(true);
   const dispatch = useDispatch();
   const CheckboxGroup = Checkbox.Group;
-  const plainOptions = ['Без пересадок', '1 пересадка', '2 пересадки', '3 пересадки'];
 
   const onChange = (list) => {
     setCheckedList(list);

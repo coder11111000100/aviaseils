@@ -1,6 +1,12 @@
 const reducerFilters = (
   // eslint-disable-next-line default-param-last
-  state = { transfers: [], filters: 'Самый дешевый', tickets: [], error: false, loading: false },
+  state = {
+    transfers: ['0 пересадок', '1 пересадка', '2 пересадки', '3 пересадки'],
+    filters: 'Самый дешевый',
+    tickets: [],
+    error: false,
+    loading: false,
+  },
   action
 ) => {
   switch (action.type) {

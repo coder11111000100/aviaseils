@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 import styles from './Ticket.module.scss';
-import img from '../assets/S7 Logo.png';
 import { transformData } from './ticketTransform/ticketTransform';
 
 function Ticket({ data }) {
-  const { price, segments } = data;
+  const { price, segments, carrier } = data;
   const objText = transformData(price, segments);
   const { _price, _duration1, _duration2, visit1, visit2, stops1, stops2, _data1, _data2, _data1To, _data2To } =
     objText;
@@ -12,7 +11,7 @@ function Ticket({ data }) {
     <div className={styles['ticket']}>
       <div className={styles['ticket__header']}>
         <div className={styles['ticket__price']}>{_price} Р </div>
-        <img className={styles['ticket__logo']} alt="logo" src={img} />
+        <img className={styles['ticket__logo']} alt="logo" src={`//pics.avs.io/99/36/${carrier}.png`} />
       </div>
 
       <ul className={`${styles['ticket__item']} styles['from']`}>

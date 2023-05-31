@@ -15,10 +15,10 @@ function getTime(time) {
   let timeMinutes = date.getMinutes().toString();
   let timeHours = date.getHours().toString();
   if (timeMinutes.length <= 1) {
-    timeMinutes = `0 ${date.getMinutes().toString()}`;
+    timeMinutes = `0${date.getMinutes().toString()}`;
   }
   if (timeHours.length <= 1) {
-    timeHours = `0 ${date.getHours().toString()}`;
+    timeHours = `0${date.getHours().toString()}`;
   }
   return `${timeHours}:${timeMinutes}`;
 }
